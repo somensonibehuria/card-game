@@ -1,7 +1,7 @@
 package com.game.design.cardgame.controller;
 
 import com.game.design.cardgame.entity.Card;
-import com.game.design.cardgame.entity.Deck;
+import com.game.design.cardgame.service.DeckService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 public class CardController {
 
     @Autowired
-    private Deck deck;
+    private DeckService deck;
 
     @GetMapping("/draw")
     public Card drawCard() {
